@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../fav.png" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/modernizr.js"></script>
+  	<script>
+		 var  count = 0
+	  </script>
+	<title>News | COVID-19 HELP</title>
+</head>
+<body onload="f1()">
+	<script>
+		function f1()
+		{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() 
+		  {
+			if (this.readyState == 4 && this.status == 200) 
+            {
+              var news = JSON.parse(this.responseText).message 
+              var doop = news.articles
+              var length = doop.totalResults
+              console.log(doop)
+			  console.log(doop[0])
+              var c = 0
+              for(c=0;c<doop.length;c++)
+              {
+				  console.log(doop[c].title)
+  if(doop[c].title.includes('Corona') || doop[c].title.includes('corona') || 
+  doop[c].title.includes('Covid') || doop[c].title.includes('covid') || 
+  doop[c].title.includes('COVID') || doop[c].title.includes('Flood risks') || 
+  doop[c].title.includes('Virus') || doop[c].title.includes('virus'))
+                {
+                  if(count > 20)
+                  {
+                    break;
+                  }
+                  else
+                  {
+					count = count  + 1
+					console.log('count:')
+					console.log(count)
+					var aa = 't' + count.toString()
+					var bb = 't' + count.toString()
+					var cc = 't' + count.toString()
+					document.getElementById('t' + count.toString()).innerHTML = doop[c].title;
+                    document.getElementById('l' + count.toString()).href = doop[c].url;document.getElementById('a' + count.toString()).href = doop[c].url;
+                    document.getElementById('i' + count.toString()).src = doop[c].urlToImage;
+                   }
+                }
+              }
+			  if(count < 21)
+			  {
+				  f2();
+			  }
+          }
+		  };
+          xhttp.open("POST", "https://infinite-temple-12324.herokuapp.com/", true);
+          xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
+          var str = "hi"
+          console.log(str);
+          xhttp.send('link='+str);
+        }
+		function f2()
+		{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() 
+		  {
+			if (this.readyState == 4 && this.status == 200) 
+            {
+              var news = JSON.parse(this.responseText).message 
+              var doop = news.articles
+              var length = doop.totalResults
+              console.log(doop)
+			  console.log(doop[0])
+              var c = 0
+              for(c=0;c<doop.length;c++)
+              {
+				  console.log(doop[c].title)
+  
+          if(doop[c].title.includes('Corona') || doop[c].title.includes('corona') || 
+  doop[c].title.includes('Covid') || doop[c].title.includes('covid') || 
+  doop[c].title.includes('COVID') || doop[c].title.includes('Flood risks') || 
+  doop[c].title.includes('Virus') || doop[c].title.includes('virus'))
+                {
+                  if(count > 20)
+                  {
+                    break;
+                  }
+                  else
+                  {
+					count = count  + 1
+					console.log('count:')
+					console.log(count)
+					var aa = 't' + count.toString()
+					var bb = 't' + count.toString()
+					var cc = 't' + count.toString()
+                    document.getElementById('t' + count.toString()).innerHTML = doop[c].title;
+                    document.getElementById('l' + count.toString()).href = doop[c].url;document.getElementById('a' + count.toString()).href = doop[c].url;
+                    document.getElementById('i' + count.toString()).src = doop[c].urlToImage;
+					
+				  }
+                }
+              }
+			  if(count < 21)
+			  {
+				  f3();
+			  }
+          }
+		  };
+          xhttp.open("POST", "https://damp-gorge-89497.herokuapp.com/", true);
+          xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
+          var str = "hi"
+          console.log(str);
+          xhttp.send('link='+str);
+        }
+		function f3()
+		{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() 
+		  {
+			if (this.readyState == 4 && this.status == 200) 
+            {
+              var news = JSON.parse(this.responseText).message 
+              var doop = news.articles
+              var length = doop.totalResults
+              console.log(doop)
+			  console.log(doop[0])
+              var c = 0
+              for(c=0;c<doop.length;c++)
+              {
+				  console.log(doop[c].title)
+  
+          if(doop[c].title.includes('Corona') || doop[c].title.includes('corona') || 
+  doop[c].title.includes('Covid') || doop[c].title.includes('covid') || 
+  doop[c].title.includes('COVID') || doop[c].title.includes('Flood risks') || 
+  doop[c].title.includes('Virus') || doop[c].title.includes('virus'))
+                              {
+                  if(count > 20)
+                  {
+                    break;
+                  }
+                  else
+                  {
+					count = count  + 1
+					console.log('count:')
+					console.log(count.toString())
+                    document.getElementById('t' + count.toString()).innerHTML = doop[c].title;
+                    document.getElementById('l' + count.toString()).href = doop[c].url;document.getElementById('a' + count.toString()).href = doop[c].url;
+                    document.getElementById('i' + count.toString()).src = doop[c].urlToImage;
+                  }
+                }
+              }
+			  if(count < 21)
+			  {
+				  f4();
+			  }
+          }
+		  };
+          xhttp.open("POST", "https://aqueous-island-67980.herokuapp.com/", true);
+          xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
+          var str = "hi"
+          console.log(str);
+          xhttp.send('link='+str);
+        }
+		function f4()
+		{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() 
+		  {
+			if (this.readyState == 4 && this.status == 200) 
+            {
+              var news = JSON.parse(this.responseText).message 
+              var doop = news.articles
+              var length = doop.totalResults
+              console.log(doop)
+			  console.log(doop[0])
+              var c = 0
+              for(c=0;c<doop.length;c++)
+              {
+				  console.log(doop[c].title)
+  
+          if(doop[c].title.includes('Corona') || doop[c].title.includes('corona') || 
+  doop[c].title.includes('Covid') || doop[c].title.includes('covid') || 
+  doop[c].title.includes('COVID') || doop[c].title.includes('Flood risks') || 
+  doop[c].title.includes('Virus') || doop[c].title.includes('virus'))
+                {
+                  if(count > 20)
+                  {
+                    break;
+                  }
+                  else
+                  {
+					count = count  + 1
+					console.log('count:')
+					console.log('t' + count.toString())
+                    document.getElementById('t' + count.toString()).innerHTML = doop[c].title;
+                    document.getElementById('l' + count.toString()).href = doop[c].url;document.getElementById('a' + count.toString()).href = doop[c].url;
+                    document.getElementById('i' + count.toString()).src = doop[c].urlToImage;
+                  }
+                }
+              }
+			  if(count < 21)
+			  {
+				  f5();
+			  }
+          }
+		  };
+          xhttp.open("POST", "https://obscure-journey-42002.herokuapp.com/", true);
+          xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
+          var str = "hi"
+          console.log(str);
+          xhttp.send('link='+str);
+        }
+		function f5()
+		{
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() 
+		  {
+			if (this.readyState == 4 && this.status == 200) 
+            {
+              var news = JSON.parse(this.responseText).message 
+              var doop = news.articles
+              var length = doop.totalResults
+              console.log(doop)
+			  console.log(doop[0])
+              var c = 0
+              for(c=0;c<doop.length;c++)
+              {
+				  console.log(doop[c].title)
+ 
+          if(doop[c].title.includes('Corona') || doop[c].title.includes('corona') || 
+  doop[c].title.includes('Covid') || doop[c].title.includes('covid') || 
+  doop[c].title.includes('COVID') || doop[c].title.includes('Flood risks') || 
+  doop[c].title.includes('Virus') || doop[c].title.includes('virus'))
+                               {
+                  if(count > 20)
+                  {
+                    break;
+                  }
+                  else
+                  {
+					count = count  + 1
+					console.log('count:')
+					console.log(count)  
+					document.getElementById('t' + count.toString()).innerHTML = doop[c].title;
+                    document.getElementById('l' + count.toString()).href = doop[c].url;document.getElementById('a' + count.toString()).href = doop[c].url;
+                    document.getElementById('i' + count.toString()).src = doop[c].urlToImage;
+                  
+                  }
+                }
+              }
+          }
+		  };
+          xhttp.open("POST", "https://morning-chamber-57864.herokuapp.com/", true);
+          xhttp.setRequestHeader('Content-type', "application/x-www-form-urlencoded")
+          var str = "hi"
+          console.log(str);
+          xhttp.send('link='+str);
+        }
+		
+	</script>
+	<div class="cd-intro-block">
+		<div class="content-wrapper">
+			<iframe src="../animated-headline/index-up.html" frameborder="0" style="width: 100%;height: 12rem;overflow:hidden" scrolling="no"></iframe>
+			<iframe src="buttons.html" frameborder="0" style="width: 100%;height: 40rem;"></iframe>
+			<a href="#0" class='cd-btn' data-action="show-projects">News</a>
+    </div>
+    
+	</div> 
+	<div class="cd-projects-wrapper">
+		<ul class="cd-slider">
+			<li class="current">
+				<a target="_blank" href="#0" id="l1">
+					<img src="img/img.png" alt="project image" id="i1">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a1"><h2 id="t1">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l2">
+					<img src="img/img.png" alt="project image" id="i2">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a2"><h2 id="t2">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l3">
+					<img src="img/img.png" alt="project image" id="i3">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a3"><h2 id="t3">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l4">
+					<img src="img/img.png" alt="project image" id="i4">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a4"><h2 id="t4">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l5">
+					<img src="img/img.png" alt="project image" id="i5">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a5"><h2 id="t5">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l6">
+					<img src="img/img.png" alt="project image" id="i6">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a6"><h2 id="t6">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l7">
+					<img src="img/img.png" alt="project image" id="i7">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a7"><h2 id="t7">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a target="_blank" href="#0" id="l8">
+					<img src="img/img.png" alt="project image" id="i8">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a8"><h2 id="t8">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l9">
+					<img src="img/img.png" alt="project image" id="i9">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a9"><h2 id="t9">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+			<li class="current">
+				<a target="_blank" href="#0" id="l10">
+					<img src="img/img.png" alt="project image" id="i10">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a10"><h2 id="t10">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l11">
+					<img src="img/img.png" alt="project image" id="i11">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a11"><h2 id="t11">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l12">
+					<img src="img/img.png" alt="project image" id="i12">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a12"><h2 id="t12">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l13">
+					<img src="img/img.png" alt="project image" id="i13">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a13"><h2 id="t13">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l14">
+					<img src="img/img.png" alt="project image" id="i14">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a14"><h2 id="t14">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l15">
+					<img src="img/img.png" alt="project image" id="i15">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a15"><h2 id="t15">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l16">
+					<img src="img/img.png" alt="project image" id="i16">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a16"><h2 id="t16">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+			
+			<li>
+				<a target="_blank" href="#0" id="l17">
+					<img src="img/img.png" alt="project image" id="i17">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a17"><h2 id="t17">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+
+			<li>
+				<a target="_blank" href="#0" id="l18">
+					<img src="img/img.png" alt="project image" id="i18">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a18"><h2 id="t18">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href="#0" id="l19">
+					<img src="img/img.png" alt="project image" id="i19">
+					<div class="project-info">
+						<a target="_blank" href="#" id="a19"><h2 id="t19">news headline</h2></a>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="cd-slider-navigation cd-img-replace">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> 
+	</div> 
+	
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main.js"></script> 
+</body>
+</html>
